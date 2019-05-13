@@ -5,6 +5,9 @@
 3. generating *.il files
 4. download : cys_rec.tar.bz2 ##ssbonds 
 5. download : tinker bin: minimize dynamic protein
-6. run pepptide3D.V2.sh
-7. gfortran -o read read.f90
-8. gfortran -o exermsf rmsd.f
+6. gfortran -o read read.f90
+7. gfortran -o exermsf rmsd.f
+8. run pepptide3D.V2.sh
+9. predicitng files in 3D/
+10. rmsd values in rmsd/
+If you have any questions, pls email to c00jsw00@gmaul.com  -->Dr. Yeng-Tseng Wang
