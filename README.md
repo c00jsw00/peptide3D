@@ -10,4 +10,6 @@
 8. run pepptide3D.V2.sh
 9. predicitng files in 3D/
 10. rmsd values in rmsd/
+
+
 If you have any questions, pls email to c00jsw00@gmail.com  -->Dr. Yeng-Tseng Wang
