@@ -1,0 +1,1 @@
+sed -e 's/E  /GLU/g' -e 's/F  /PHE/g' -e 's/G  /GLY/g' -e 's/H  /HIS/g' -e 's/I  /ILE/g' -e 's/K  /LYS/g' -e 's/L  /LEU/g' -e 's/M  /MET/g' -e 's/P  /PRO/g' -e 's/R  /ARG/g' -e 's/Q  /GLN/g' -e 's/N  /ASN/g' -e 's/S  /SER/g' -e 's/T  /THR/g' -e 's/W  /TRP/g' -e 's/Y  /TYR/g' -e 's/V  /VAL/g' -e 's/A  /ALA/g' -e 's/C  /CYS/g' temp02 
