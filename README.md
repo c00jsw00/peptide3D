@@ -1,4 +1,4 @@
-# peptide3D
+# peptide3D with GaMD
 3D peptide conformation prediction
 1. install: SPIDER3-Single_np.tgz or  SPIDER3-Single_tf.tgz
 2. run impute_script_np.sh
@@ -8,7 +8,7 @@
 5. download : tinker bin: minimize dynamic protein & parameters
 6. gfortran -o read read.f90
 7. gfortran -o exermsf rmsd.f
-8. run pepptide3D.V2.sh
+8. run pepptide3D.V3.sh
 9. predicitng files in 3D/
 10. rmsd values in rmsd/
 
