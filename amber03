@@ -1,0 +1,3 @@
+solvatebox aa TIP3PBOX 10.0
+saveAmberParm aa zw.top zw.crd
+quit

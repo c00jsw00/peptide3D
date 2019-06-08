@@ -1,0 +1,8 @@
+source /usr/local/amber18/dat/leap/cmd/oldff/leaprc.ff99SB
+source leaprc.gaff
+loadamberparams frcmod.ionsjc_spce
+addAtomTypes {
+  { "ZN" "Zn" "sp3" }
+}
+# load the frcmd file for Zn2+ after the definition done by "addAtomTypes"
+aa = loadpdb amber.pdb
