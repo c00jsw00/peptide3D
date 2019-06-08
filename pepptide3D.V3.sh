@@ -44,7 +44,7 @@ do
    ./protein < in01
    ./minimize peptide.xyz   -k min.key 0.01 > min.out
    ./dynamic  peptide.xyz_2 -k md.key 50000 1.0 0.5 2 310 > md_nvt.out
-   mv peptide.00 peptide.xyz
+   mv peptide.020 peptide.xyz
    ./xyzpdb <in02
    #f1=$(echo $f | sed 's/...$//')
    #GAMD AMBER
