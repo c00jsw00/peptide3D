@@ -14,6 +14,7 @@ do
    awk '{ printf "%-3s %5.2f %5.2f %5.2f %5.2f %5.2f %5.2f %5.2f\n", $2, $6, $7, $9, $10, $11, $12, $13}' temp01>temp02
    ################################################################
    f1=$(echo $f | sed 's/...$//')
+   #rm -rf peptide.*
    lin/cys_rec $f1.seq >ssbond
    # 5 ssbonds
    awk '$1 == "The" {} END {print $7 $8 $9 $10 $11 $12 $13 $14 $15 $16}' ssbond >ssbond2
@@ -31,20 +32,18 @@ do
    awk '{if ($10=="") print "0" ;else print $10}' ssbond3 >>ssbond4
    ################################################################
    sh convert.sh >temp03
-   if [ -f ssbond2]
+   if [ -s "ssbond2" ]
    then 
          mv temp03 new 
-         ./read
    fi
-   rm -rf new
    ################################################################
-   #./read
+   ./read
    #sh convert.sh >temp03
    sh combin.sh
    ./protein < in01
    ./minimize peptide.xyz   -k min.key 0.01 > min.out
    ./dynamic  peptide.xyz_2 -k md.key 50000 1.0 0.5 2 310 > md_nvt.out
-   mv peptide.090 peptide.xyz
+   mv peptide.099 peptide.xyz
    ./xyzpdb <in02
    #f1=$(echo $f | sed 's/...$//')
    #GAMD AMBER
@@ -57,6 +56,7 @@ do
    tleap -s -f tleap.in
    sh amber.run.sh >log   
    ambpdb -p zw.top -c gamd.rst | grep -v WAT >gamd.pdb
+   rm -rf new
    rm -rf *.x
    rm -rf *.out 
    rm -rf *.rst
@@ -65,6 +65,9 @@ do
    rm -rf amber02
    rm -rf tleap.in
    rm -rf amber.pdb
+   rm -rf ssbond4
+   rm -rf *.xyz*
+   rm -rf in01
    #
    mv gamd.pdb 3D/$f1.pdb
    rm -rf peptide.*
